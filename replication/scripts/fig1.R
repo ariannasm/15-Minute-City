@@ -3,6 +3,8 @@
 ## outcomes_blckgrp_clean_popweighted.csv
 ## outcomes_urb_clean_popweighted.csv
 ## dummy_safegraph_data.csv
+## tl_2021_us_uac10.geojson
+
 
 ## OUTPUTS
 ## -----------
@@ -52,7 +54,7 @@ setwd(main_path)
 cbgs_data_path <- file.path(main_path, "data", "clean", "outcomes_blckgrp_clean_popweighted.csv")
 urban_areas_data_path <- file.path(main_path, "data", "clean", "outcomes_urb_clean_popweighted.csv")
 iso_data_path <- file.path(main_path, "data", "clean", "dummy_safegraph_data.csv")
-urban_areas_geo_path <- file.path(main_path, "data", "raw", "census_urbanareas_2021", "tl_2021_us_uac10", "tl_2021_us_uac10.shp")
+urban_areas_geo_path <- file.path(main_path, "data", "clean", "tl_2021_us_uac10.geojson")
 
 
 # Reading the dataset of block groups and renaming columns
@@ -255,7 +257,7 @@ usage_dash <- ggplot(data=pois_grp, aes(x=cat15, color=cat15, y=visits)) +
               legend.direction = "horizontal",
               legend.text=element_text(size=10, family="Helvetica"),
               axis.text.y = element_text(face=600, color="black",size=8, family="Helvetica"),
-              plot.subtitle = element_text(hjust=2, vjust=-1.05,size=10, face=800, family="Helvetica"),
+              plot.subtitle = element_text(hjust=-14, vjust=-1.05,size=10, face=800, family="Helvetica"),
               axis.line = element_line(colour = 'black', size = 0.2),
               axis.ticks=element_line(size=0.2),
               plot.margin = margin(
@@ -304,7 +306,7 @@ access_dash <- ggplot(data=filter(pois, in_15m), aes(x=cat15)) +
               legend.text=element_text(size=10),
               text=element_text(size=10,  family="Helvetica"),
               axis.text.y = element_text(face=600, color="black",size=8,family="Helvetica"),
-              plot.subtitle = element_text(hjust=2, vjust=-1.05, face=800,size=10, family="Helvetica"),
+              plot.subtitle = element_text(hjust=-8.5, vjust=-1.05, face=800,size=10, family="Helvetica"),
               axis.line = element_line(colour = 'black', size = 0.2),
               axis.ticks=element_line(size=0.2),
               plot.margin = margin(
@@ -365,6 +367,6 @@ grid.draw(ggplotGrob(usage_dash))
 popViewport()
 popViewport()
 popViewport()
-grid.text("a", x = 0.03, y = .946, gp = gpar(fontfamily = "Helvetica", fontface = "bold"))
-grid.text("b", x = 0.53, y = .946, gp = gpar(fontfamily = "Helvetica", fontface = "bold"))
+grid.text("a", x = 0.03, y = .955, gp = gpar(fontfamily = "Helvetica", fontface = "bold"))
+grid.text("b", x = 0.53, y = .955, gp = gpar(fontfamily = "Helvetica", fontface = "bold"))
 dev.off()

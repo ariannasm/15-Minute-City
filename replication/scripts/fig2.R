@@ -2,6 +2,7 @@
 ## -----------
 ## outcomes_blckgrp_clean_popweighted.csv
 ## outcomes_urb_clean_popweighted.csv
+## tl_2021_us_uac10.geojson
 
 ## OUTPUTS
 ## -----------
@@ -52,7 +53,7 @@ setwd(main_path)
 # Define paths to data files
 cbgs_data_path <- file.path(main_path, "data", "clean", "outcomes_blckgrp_clean_popweighted.csv")
 urban_areas_data_path <- file.path(main_path, "data", "clean", "outcomes_urb_clean_popweighted.csv")
-urban_areas_geo_path <- file.path(main_path, "data", "clean", "census_urbanareas_2021", "tl_2021_us_uac10", "tl_2021_us_uac10.shp")
+urban_areas_geo_path <- file.path(main_path, "data", "clean", "tl_2021_us_uac10.geojson")
 
 
 # Read the datasets.
