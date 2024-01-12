@@ -1,3 +1,5 @@
 replication/data/clean/* filter=lfs diff=lfs merge=lfs -text
 *.csv filter=lfs diff=lfs merge=lfs -text
 *.geojson filter=lfs diff=lfs merge=lfs -text
+replication/data/clean/*.csv filter=lfs diff=lfs merge=lfs -text
+replication/data/clean/*.geojson filter=lfs diff=lfs merge=lfs -text
